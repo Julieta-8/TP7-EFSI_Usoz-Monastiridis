@@ -71,3 +71,26 @@ export default defineConfig([
   },
 ])
 ```
+Apartir del figma se a decidido que el programa esté compuesto:
+Header : con los estados
+Feed: listado de todos los posteos, quien tednra la api y se comunicara con los poseteos
+Post:
+Stories: listado con los estados de seguidores
+ModalPost: Al clikear en una publicacion se ira a otra vista para mostrar todos los detalles:
+Imagen ampliada.
+Nombre de usuario.
+Descripción o caption.
+Cantidad de likes.
+Comentarios simulados.
+Botones de interacción.
+Fecha o información adicional del posteo.
+
+Perfil : perfil del usuario
+Nombre de usuario.
+Foto de perfil.
+Biografía breve.
+Cantidad de publicaciones.
+Cantidad de seguidores.
+Cantidad de seguidos.
+Publicaciones asociadas al perfil.
+Botón visual de editar perfil o configuración.
