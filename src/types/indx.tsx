@@ -1,11 +1,14 @@
-export type PropsListado = {
-    posts: Post[];
-}
+export interface UnsplashPhoto {
+  id: string;
 
-export type Post = {
-    user: string;
-    url: string;
-    likes: number;
-    suscriptores: number;
-    description: string;
+  urls: {
+    regular: string;
+  };
+
+  user: {
+    username: string;
+    name: string;
+  };
+
+  likes: number;
 }
