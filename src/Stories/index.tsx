@@ -1,9 +1,22 @@
-export type PropsListado = {
-    stories: Story[];
+import type { PropsListado } from "../../types";
+
+const Stories = ( {posts}: PropsListado ) => {
+    return (
+        <table>
+ 
+            <tbody>
+                { posts.map(p => (
+                    <tr>
+                        <td>{ p.user }</td>
+                        <td>{ p.url }</td>
+
+                    </tr>
+                )
+                )}
+                
+            </tbody>
+        </table>
+    );
 }
 
-export type Story = {
-    user: string;
-    foto: string;
-    
-}
+export default Stories;

@@ -2,50 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const stories: Story[] = [
-    {
-      user: "Shrek",
-      foto: 
-   
+axios.get(
+  "https://api.unsplash.com/photos/random",
+  {
+    params: {
+      count: 10,
+      query: "travel"
     },
-       {
-      user: "Shrek",
-      foto: 
-   
-    },
-     {
-      user: "Shrek",
-      foto: 
-   
-    },
-       {
-      user: "Shrek",
-      foto: 
-   
-    },
-       {
-      user: "Shrek",
-      foto: 
-   
-    },
-       {
-      user: "Shrek",
-      foto: 
-   
-    },
-       {
-      user: "Shrek",
-      foto: 
-   
-    },
-  
-  ];
+    headers: {
+      Authorization: "UGsWykxBld4exoNQLBRiNzmzSOwjXrZenkIjmx0XrfI"
+    }
+  }
+)
+.then(response => {
+  console.log(response.data);
+});
   return (
     <>
+
   <Header>
    </Header>
     <Stories stories={stories}/>
