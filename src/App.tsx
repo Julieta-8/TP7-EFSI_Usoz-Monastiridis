@@ -1,13 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
 import axios from 'axios'
 import './App.css'
+import Feed from './Feed'
+import Header from './Header'
+import Stories from './Stories'
+import Perfil from './Perfil'
+import type { UnsplashPhoto } from './types'
+import type { PropsListado } from './types'
 
 function App() {
+  
+
   const [posts, setPosts] =
-  useState<[PropsListado]>([]);
+  useState<[UnsplashPhoto]>([]);
 axios.get(
   "https://api.unsplash.com/photos/random",
   {
@@ -21,13 +27,14 @@ axios.get(
   }
 )
 .then(response => {
-  SetPost(response.data);
+  setPosts(response.data);
 });
 
 
-/*const manualData: ManualPostData[] = [
+const posteo: PropsListado[]  = [
 
   {
+    id: 1,
     caption: "Explorando la Patagonia",
     comments: ["Hermoso lugar"],
     date: "Hace 2 horas",
@@ -35,30 +42,53 @@ axios.get(
   },
 
   {
+    id:2,
     caption: "Atardecer inolvidable",
     comments: ["Increíble foto"],
     date: "Hace 1 día",
     location: "Santorini"
-  }
-];*/
-/*const posts: Post[] =
-  response.data.map(photo => ({
-    ...photo,
+  },
+  {
+    id:3,
+    caption: "Atardecer inolvidable",
+    comments: ["Increíble foto"],
+    date: "Hace 1 día",
+    location: "Santorini"
+  },
+  {
+    id:4,
+    caption: "Atardecer inolvidable",
+    comments: ["Increíble foto"],
+    date: "Hace 1 día",
+    location: "Santorini"
+  },
+  {
+    id:5,
+    caption: "Atardecer inolvidable",
+    comments: ["Increíble foto"],
+    date: "Hace 1 día",
+    location: "Santorini"
+  },
+  {
+    id:6,
+    caption: "Atardecer inolvidable",
+    comments: ["Increíble foto"],
+    date: "Hace 1 día",
+    location: "Santorini"
+  },
+];
 
-    caption: randomCaption(),
 
-    comments: randomComments(),
 
-    date: randomDate(),
 
-    location: randomLocation()
-  }));*/
+
+
   return (
     <>
 
   <Header>
    </Header>
-    <Stories />
+    <Stories></Stories>
     <Perfil></Perfil>
     <Feed></Feed>
 

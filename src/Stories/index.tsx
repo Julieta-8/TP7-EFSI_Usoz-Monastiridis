@@ -1,14 +1,14 @@
 import type { PropsListado } from "../../types";
-
-const Stories = ( {posts}: PropsListado ) => {
+import type { UnsplashPhoto } from "../../types";
+const Stories = ( {posteos}: PropsListado, {posteoAPI}: UnsplashPhoto) => {
     return (
         <table>
- 
+                <h1>STORIES</h1>
             <tbody>
-                { posts.map(p => (
+                { posteoAPI.map(p => (
                     <tr>
                         <td>{ p.user }</td>
-                        <td>{ p.url }</td>
+                        <td>{ p.url.regular }</td>
 
                     </tr>
                 )

@@ -1,28 +1,24 @@
-const Post = ({
-  post,
-  onSelectPost
-}: PostProps) => {
+import type { PropsListado } from "../../types";
+import type { UnsplashPhoto } from "../../types2";
+
+const Post = ({post,onSelectPost}: PostProps) => {
 
   return (
-
-    <div
-      onClick={() => onSelectPost(post)}
-    >
-
-      <h3>
+<tbody>
+      <td>
         @{post.user.username}
-      </h3>
+      </td>
 
       <img
         src={post.urls.regular}
         alt=""
       />
 
-      <p>
+      <td>
         ❤ {post.likes}
-      </p>
+      </td>
 
-    </div>
+    </tbody>
 
   );
 };

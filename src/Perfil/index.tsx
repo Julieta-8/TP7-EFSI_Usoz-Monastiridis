@@ -1,4 +1,7 @@
-const Perfil = ({}) => {
+import type { PropsListado } from "../../types";
+import type { UnsplashPhoto } from "../../types2";
+
+const Perfil = ({{posteos}: PropsListado, {posteoAPI}: UnsplashPhoto}) => {
 
   return (
     <div>

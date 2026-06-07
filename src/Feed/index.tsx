@@ -1,28 +1,43 @@
-import type { PropsListado } from "../../types";
 
-const ListadoPeliculas = ( {peliculas}: PropsListado ) => {
+import type { PropsListado } from "../../types";
+import type { UnsplashPhoto } from "../../types";
+import Post from "../Post"
+const Feed = ( {posteos}: PropsListado, {posteoAPI}: UnsplashPhoto ) => {
+    
+     const [posteoSeleccionado, setPosteoSeleccionado] = useState(null);
+    
+    
     return (
+           {posteoSeleccionado === null ? (
         <table>
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Director</th>
-                    <th>Año</th>
+                    <th>TRENDING</th>
+              
                 </tr>
             </thead>
             <tbody>
-                { peliculas.map(p => (
+                  { posteoAPI.map((pa) => (
                     <tr>
-                        <td>{ p.nombre }</td>
-                        <td>{ p.director }</td>
-                        <td>{ p.anio }</td>
+                      <Posteos
+                            posteoSeleccionado:{posteoSeleccionado}
+                            setPosteoSeleccionado:{setPosteoSeleccionado}
+                            post:{pa}
+                      />
                     </tr>
                 )
                 )}
-                
             </tbody>
-        </table>
-    );
+        </table>): (
+          <Post
+         
+            posteoSeleccionado={posteoSeleccionado}
+            Set={setPosteoSeleccionado}
+          />
+        )}
+    
+);
+
 }
 
-export default ListadoPeliculas;
+export default Feed;
