@@ -1,7 +1,7 @@
-import type { PropsListado } from "../../types";
-import type { UnsplashPhoto } from "../../types2";
+import type { PropsListado } from ".././types";
+import type { UnsplashPhoto } from ".././types";
 
-const Post = ({post,onSelectPost}: PostProps) => {
+const Post = (posteoSeleccionado, setPosteoSeleccionado) => {
 
   return (
 <tbody>
@@ -22,3 +22,4 @@ const Post = ({post,onSelectPost}: PostProps) => {
 
   );
 };
+export default Post;

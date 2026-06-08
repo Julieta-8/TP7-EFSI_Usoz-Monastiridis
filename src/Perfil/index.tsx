@@ -1,7 +1,7 @@
-import type { PropsListado } from "../../types";
-import type { UnsplashPhoto } from "../../types2";
+import type { PropsListado } from ".././types";
+import type { UnsplashPhoto } from ".././types";
 
-const Perfil = ({{posteos}: PropsListado, {posteoAPI}: UnsplashPhoto}) => {
+const Perfil = ({posteo}: PropsListado, {posteoAPI}: UnsplashPhoto) => {
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import axios from 'axios'
 import './App.css'
@@ -13,7 +13,7 @@ function App() {
   
 
   const [posts, setPosts] =
-  useState<[UnsplashPhoto]>([]);
+  useState<UnsplashPhoto[]>([]);
 axios.get(
   "https://api.unsplash.com/photos/random",
   {
@@ -31,7 +31,7 @@ axios.get(
 });
 
 
-const posteo: PropsListado[]  = [
+interface posteo: Listado[]=  [
 
   {
     id: 1,

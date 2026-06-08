@@ -1,6 +1,6 @@
-import type { PropsListado } from "../../types";
-import type { UnsplashPhoto } from "../../types";
-const Stories = ( {posteos}: PropsListado, {posteoAPI}: UnsplashPhoto) => {
+import type { PropsListado } from ".././types";
+import type { UnsplashPhoto } from ".././types";
+const Stories = ( {posteo}: PropsListado, {posteoAPI}: UnsplashPhoto) => {
     return (
         <table>
                 <h1>STORIES</h1>

@@ -1,8 +1,13 @@
 
-import type { PropsListado } from "../../types";
-import type { UnsplashPhoto } from "../../types";
+import type { PropsListado } from ".././types";
+import type { UnsplashPhoto } from ".././types";
 import Post from "../Post"
-const Feed = ( {posteos}: PropsListado, {posteoAPI}: UnsplashPhoto ) => {
+import Posteos from "../Posteos"
+import { useState, useEffect } from 'react'
+
+
+
+const Feed = ( {posteo}: PropsListado, {posteoAPI}: UnsplashPhoto ) => {
     
      const [posteoSeleccionado, setPosteoSeleccionado] = useState(null);
     
@@ -30,9 +35,8 @@ const Feed = ( {posteos}: PropsListado, {posteoAPI}: UnsplashPhoto ) => {
             </tbody>
         </table>): (
           <Post
-         
             posteoSeleccionado={posteoSeleccionado}
-            Set={setPosteoSeleccionado}
+            setPosteoSeleccionado={setPosteoSeleccionado}
           />
         )}
     

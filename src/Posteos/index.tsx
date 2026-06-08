@@ -1,18 +1,23 @@
-import type { PropsListado } from "../../types";
-import type { UnsplashPhoto } from "../../types2";
+import type { PropsListado } from ".././types";
+import type { UnsplashPhoto } from ".././types";
 
 const Posteos = (post, posteoSeleccionado, setPosteoSeleccionado) => {
 
   return (
 
-    <tbody>
-      onClick={() => onSelectPost(post)}
-    >
+   <tbody>
+ 
+
 
       <td>
         @{post.user.username}
       </td>
-         <button onClick={() => setPosteoSeleccionado(post.id))}>Conocé más</button>
+
+
+
+         <button onClick={(() => setPosteoSeleccionado(post.id))}>Conocé más</button>
+
+
       <img
         src={post.urls.regular}
         alt=""
