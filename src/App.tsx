@@ -6,7 +6,9 @@ import Feed from './Feed'
 import Header from './Header'
 import Stories from './Stories'
 import Perfil from './Perfil'
+import type { Listado  } from './types'
 import type { Unsplash } from './types'
+
 function App() {
   
 
@@ -15,8 +17,7 @@ function App() {
 
 
   useEffect(async () => {
-    const responseUsuarios = await 
-axios.get(
+    const responseUsuarios = await axios.get(
   "https://api.unsplash.com/photos/random",
   {
     params: {
@@ -27,13 +28,11 @@ axios.get(
       Authorization: "UGsWykxBld4exoNQLBRiNzmzSOwjXrZenkIjmx0XrfI"
     }
   }
-)
-
+);
   setPosts(responseUsuarios.data);
-
   }, []);
 
-type posteoAPI: Unsplash[]=  [ 
+const posteo: Listado[]=  [ 
 
   {
     id: 1,
@@ -90,9 +89,9 @@ type posteoAPI: Unsplash[]=  [
 
   <Header>
    </Header>
-    <Stories  API ={posts} setPosts={setPosts}/>
-    <Perfil  API ={posts} setPosts={setPosts} />
-    <Feed    API ={posts} setPosts={setPosts}/>
+    <Stories  postAPI ={posts} setPosts={setPosts}/>
+    <Perfil  postAPI ={posts} setPosts={setPosts} posteo={posteo} />
+    <Feed    postAPI ={posts} setPosts={setPosts} posteo={posteo}/>
 
     </>
   )

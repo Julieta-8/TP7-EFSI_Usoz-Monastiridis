@@ -1,7 +1,6 @@
-import type { Unsplash } from ".././types";
-import type { UnsplashPhoto } from ".././types";
 
-const Post = (posteoSeleccionado, setPosteoSeleccionado) => {
+
+const Post = ({posteoSeleccionado, setPosteoSeleccionado}) => {
 
   return (
 <tbody>

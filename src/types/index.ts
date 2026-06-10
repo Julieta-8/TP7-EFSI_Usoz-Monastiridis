@@ -16,19 +16,25 @@ export type Unsplash = {
   };
 
   likes: number;
-
-
-
-caption?: string;
-
-  comments?: string[];
-
-  date?: string;
-
-  location?: string;
-
 }
 
 
 
 
+
+
+export type PropsListado = {
+    posteo: Listado[];
+}
+
+
+export interface Listado {
+  id: number;
+  caption: string;
+
+  comments: string[];
+
+  date: string;
+
+  location: string;
+}

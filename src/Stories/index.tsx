@@ -1,6 +1,7 @@
 import type { Unsplash } from ".././types";
 import type { UnsplashPhoto } from ".././types";
-const Stories = (  {posteoAPI}: UnsplashPhoto, PosteoAPI, setPosts) => {
+
+const Stories = ({ postAPI, setPosts}) => {
     return (
         <table>
                 <h1>STORIES</h1>

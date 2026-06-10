@@ -1,7 +1,7 @@
 import type { Unsplash } from ".././types";
 import type { UnsplashPhoto } from ".././types";
 
-const Posteos = (post, posteoSeleccionado, setPosteoSeleccionado) => {
+const Posteos = ({ setPosteoSeleccionado, post}) => {
 
   return (
 
@@ -22,6 +22,7 @@ const Posteos = (post, posteoSeleccionado, setPosteoSeleccionado) => {
         src={post.urls.regular}
         alt=""
       />
+          <button  onClick={() => setPosteoSeleccionado(post.id)}>Conocé más</button>
 
       <td>
         ❤ 
