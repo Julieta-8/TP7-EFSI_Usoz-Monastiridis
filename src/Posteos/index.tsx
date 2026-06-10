@@ -1,4 +1,4 @@
-import type { PropsListado } from ".././types";
+import type { Unsplash } from ".././types";
 import type { UnsplashPhoto } from ".././types";
 
 const Posteos = (post, posteoSeleccionado, setPosteoSeleccionado) => {
