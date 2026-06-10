@@ -1,20 +1,41 @@
 
+import { useEffect, useState } from "react";
+import type { PropsPost, Unsplash } from "../types";
+const Post = ({posteoSeleccionado, setPosteoSeleccionado, postAPI}: PropsPost) => {
 
-const Post = ({posteoSeleccionado, setPosteoSeleccionado}) => {
+ const detalle = postAPI.find(
+  p => p.id === posteoSeleccionado
+);
+if (!detalle) {
+  return <p>Post no encontrado</p>;
+}
+/*  [
+  {
 
+
+    caption:"Explorando la Patagonia",
+
+    comments:["Hermoso lugar"],
+
+    date:"Hace 2 horas",
+
+    location:"Patagonia"
+  }
+]
+*/
   return (
 <tbody>
       <td>
-        @{post.user.username}
+        @{detalle.user.username}
       </td>
 
       <img
-        src={post.urls.regular}
+        src={detalle.urls.regular}
         alt=""
       />
 
       <td>
-        ❤ {post.likes}
+        ❤ {detalle.likes}
       </td>
 
     </tbody>

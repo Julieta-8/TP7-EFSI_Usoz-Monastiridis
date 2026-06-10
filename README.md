@@ -88,12 +88,13 @@ Fecha o información adicional del posteo.
 Perfil : perfil del usuario
 Nombre de usuario.
 Foto de perfil.
-Biografía breve.
+Likes.
+Seguidores.
 Cantidad de publicaciones.
-Cantidad de seguidores.
-Cantidad de seguidos.
-Publicaciones asociadas al perfil.
 Botón visual de editar perfil o configuración.
 
 
 //Se decidio utilizar dos -- uno para recibir la ifnormacion de la API y otro para llenar las variables faltantes manualmente
+Tuvimos problemas para detectar el error detras de los paramteros entre componenetes y decidimos implementar props 
+
+//Como los formatos del id de la API y el manual son diferentes(ya que uno es un strign), se decidió hacer un combinado

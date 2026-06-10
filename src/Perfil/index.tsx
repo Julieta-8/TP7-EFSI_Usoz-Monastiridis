@@ -1,12 +1,14 @@
+import type { PropsPerfil } from "../types";
 
+const Perfil = ({postAPI}: PropsPerfil) => {
+const perfil = postAPI[0];
 
-const Perfil = ({postAPI, setPosts, posteo}) => {
-
+if (!perfil) return <p>Cargando...</p>;
   return (
     <div>
-     <img src="img" alt={postAPI.urls.regular} className="Perfil"/>
-      <h1>{postAPI.user.name}</h1>
-      <p>{postAPI.user.username}</p>
+     <img src="img" alt={perfil.urls.regular} className="Perfil"/>
+      <h1>{perfil.user.name}</h1>
+      <p>{perfil.user.username}</p>
         <div className="Buscador">
            
            <div>
@@ -15,7 +17,7 @@ const Perfil = ({postAPI, setPosts, posteo}) => {
            </div>
            <div>
             <img src="" alt="" />
-            <h3>{postAPI.likes}</h3>
+            <h3>{perfil.likes}</h3>
            </div>
           
         </div>

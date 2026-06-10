@@ -1,15 +1,15 @@
 
-import type { PropsListado } from ".././types";
-import type { Listado } from ".././types";
+
 import Post from "../Post"
 import Posteos from "../Posteos"
 import { useState, useEffect } from 'react'
 
 
+import type { PropsFeed } from "../types";
 
-const Feed = ({ postAPI, setPosts }: PropsListado) => {
-  const [posteoSeleccionado, setPosteoSeleccionado] = useState(null);
-
+const Feed = ({ postAPI }: PropsFeed) => {
+const [posteoSeleccionado, setPosteoSeleccionado] =
+  useState<string | null>(null);
   return (
     <>
       {posteoSeleccionado === null ? (
@@ -21,9 +21,9 @@ const Feed = ({ postAPI, setPosts }: PropsListado) => {
           </thead>
 
           <tbody>
-            {postAPI.map((pa) => (
+            {postAPI.map(pa => (
               <Posteos
-                key={pa.id}
+               
                 setPosteoSeleccionado={setPosteoSeleccionado}
                 post={pa}
               />
@@ -34,6 +34,8 @@ const Feed = ({ postAPI, setPosts }: PropsListado) => {
         <Post
           posteoSeleccionado={posteoSeleccionado}
           setPosteoSeleccionado={setPosteoSeleccionado}
+         
+          postAPI ={postAPI}
         />
       )}
     </>

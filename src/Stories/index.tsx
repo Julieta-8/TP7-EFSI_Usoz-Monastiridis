@@ -1,15 +1,16 @@
-import type { Unsplash } from ".././types";
-import type { UnsplashPhoto } from ".././types";
+import type { Unsplash, UnsplashPhoto } from "../types";
+import type { PropsStories } from "../types";
 
-const Stories = ({ postAPI, setPosts}) => {
+
+const Stories = ({postAPI}: PropsStories) => {
     return (
         <table>
                 <h1>STORIES</h1>
             <tbody>
-                { setPosts.map(p => (
+                { postAPI.map(p => (
                     <tr>
-                        <td>{ p.user }</td>
-                        <td>{ p.url.regular }</td>
+                        <td>{ p.user.username }</td>
+                        <td>{ p.urls.regular }</td>
 
                     </tr>
                 )
