@@ -72,11 +72,11 @@ export default defineConfig([
 ])
 ```
 Apartir del figma se a decidido que el programa esté compuesto:
-Header : con los estados
-Feed: listado de todos los posteos, quien tednra la api y se comunicara con los poseteos
-
-Stories: listado con los estados de seguidores
-ModalPost: Al clikear en una publicacion se ira a otra vista para mostrar todos los detalles:
+Header : con los estados, iconos y un buscador
+Feed: listado de todos los posteos y se comunicara con la lsita de posteos y el poseteo seleccionado
+Stories: listado con los estados de seguidores, susfotos de perfil y usernames
+Posteos: formaran parte de la lista mostrada en feed con la información basica. el contenido está dentro de un botón que al apretarlo te lleva a otra vista más detallada de ese mismo psot seleccionado
+Post: Al clikear en una publicacion se ira a otra vista para mostrar todos los detalles:
 Imagen ampliada.
 Nombre de usuario.
 Descripción o caption.
@@ -93,9 +93,11 @@ Seguidores.
 Cantidad de publicaciones.
 Botón visual de editar perfil o configuración.
 
+-Uso de props: los componentes se comunican con los props atravez de lo que se recibe pro pramateros y lo requerido para que es componente funcione
+-Utilizamos el primer diseño de figma: https://www.figma.com/community/file/1004033523744290376
 
-//Se decidio utilizar dos -- uno para recibir la ifnormacion de la API y otro para llenar las variables faltantes manualmente
-Tuvimos problemas para detectar el error detras de los paramteros entre componenetes y decidimos implementar props 
+-PAra el perfil del usuario decidimos utilizar la primera foto que nos concediera la API al giual que su nombre y usuario. Pero decidmos cargar la información manualmente como su cantidad de seguidores y botones de decoración para hacerlo lo más aprecido al figma
 
-//Como los formatos del id de la API y el manual son diferentes(ya que uno es un strign), se decidió hacer un combinado
 Para la logica implementamos un metodo similar al tp de API de peliculas, donde se utiliza el usestate vació y al clickear en un posteo se le da el id del posteo apretado, esto lo lleva al componente post que posee la informacion detallada en base al id da la variable transferida 
+
+
