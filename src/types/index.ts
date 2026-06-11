@@ -52,10 +52,18 @@ export interface Listado {
 
 ///////////////////
 export type PropsFeed = {
+    posteoSeleccionado: string | null;
+  setPosteoSeleccionado: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
   postAPI: Unsplash[];
   /*posteo: Listado[];*/
 };
 export type PropsStories = {
+    posteoSeleccionado: string | null;
+  setPosteoSeleccionado: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
   postAPI: Unsplash[];
 };
 
@@ -66,6 +74,10 @@ export type PropsPosteos = {
   >;
 };
 export type PropsPerfil ={
+    posteoSeleccionado: string  | null;
+  setPosteoSeleccionado: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
   postAPI:Unsplash[];
 }
 export type PropsPost = {

@@ -2,15 +2,18 @@ import type { Unsplash, UnsplashPhoto } from "../types";
 import type { PropsStories } from "../types";
 
 
-const Stories = ({postAPI}: PropsStories) => {
+const Stories = ({posteoSeleccionado, setPosteoSeleccionado,postAPI}: PropsStories) => {
     return (
-        <table>
-                <h1>STORIES</h1>
-            <tbody>
+        <>
+         {posteoSeleccionado === null ? (
+        <table className="tableStory">
+                <h1 className="Stories">STORIES</h1>
+            <tbody >
                 { postAPI.map(p => (
                     <tr>
-                        <td>{ p.user.username }</td>
-                        <td>{ p.urls.regular }</td>
+                        <td className="StorieUser">{ p.user.username }</td>
+                            <img    className="StorieIMG" src={p.urls.regular}
+        alt={p.urls.regular} />
 
                     </tr>
                 )
@@ -18,6 +21,8 @@ const Stories = ({postAPI}: PropsStories) => {
                 
             </tbody>
         </table>
+            ):(<div></div>)}
+                    </>
     );
 }
 

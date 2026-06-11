@@ -1,14 +1,16 @@
 import type { PropsPerfil } from "../types";
 
-const Perfil = ({postAPI}: PropsPerfil) => {
+const Perfil = ({posteoSeleccionado, setPosteoSeleccionado,postAPI}: PropsPerfil) => {
 const perfil = postAPI[0];
 
 if (!perfil) return <p>Cargando...</p>;
   return (
+    <>
+    {posteoSeleccionado === null ? (
     <div>
-     <img src="img" alt={perfil.urls.regular} className="Perfil"/>
-      <h1>{perfil.user.name}</h1>
-      <p>{perfil.user.username}</p>
+     <img src="img" alt={perfil.urls.regular} className="FotoPerfil"/>
+      <h1 className="UserNamePerfil">{perfil.user.name}</h1>
+      <p className="NamePerfil">{perfil.user.username}</p>
         <div className="Buscador">
            
            <div>
@@ -45,6 +47,8 @@ if (!perfil) return <p>Cargando...</p>;
         </div>
        
     </div>
+    ):(<div></div>)}
+    </>
   );
 };
 

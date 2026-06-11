@@ -6,19 +6,21 @@ const Posteos = ({ setPosteoSeleccionado, post}: PropsPosteos) => {
 
   return (
 
-   <tbody>
+   <tbody className="bodyPosteos">
  
  <button onClick={(() => setPosteoSeleccionado(post.id))}>
-      <img
+      <img className="PosteosImg"
         src={post.urls.regular}
         alt={post.urls.regular}
       />
-      <td>
+      <td className="UserPosteos">
         @{post.user.username}
       </td>
-      <td>
+      <td className="LikesPosteos">
         ❤ {post.likes}
       </td>
+      <img className="message"    src="" alt="" />
+      <img className="Comments" src="" alt="" />
   </button>
     </tbody>
 

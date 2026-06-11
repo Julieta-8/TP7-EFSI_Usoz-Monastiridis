@@ -9,7 +9,8 @@ import Perfil from './Perfil'
 import type { Unsplash } from './types'
 
 function App() {
-  
+  const [posteoSeleccionado, setPosteoSeleccionado] =
+  useState<string | null>(null);
 
   const [posts, setPosts] =
   useState<Unsplash[]>([]);
@@ -89,13 +90,13 @@ const posteo: Listado[]=  [
 
   return (
     <>
-
+<div>
   <Header>
    </Header>
-    <Stories  postAPI ={posts} />
-    <Perfil  postAPI ={posts} />
-    <Feed    postAPI ={posts} />
-
+    <Stories  postAPI ={posts}    setPosteoSeleccionado ={setPosteoSeleccionado} posteoSeleccionado ={posteoSeleccionado} />
+    <Perfil  postAPI ={posts} posteoSeleccionado ={posteoSeleccionado} setPosteoSeleccionado ={setPosteoSeleccionado} />
+    <Feed    postAPI ={posts} posteoSeleccionado ={posteoSeleccionado} setPosteoSeleccionado ={setPosteoSeleccionado} />
+</div>
     </>
   )
 }

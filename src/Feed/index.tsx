@@ -7,20 +7,19 @@ import { useState, useEffect } from 'react'
 
 import type { PropsFeed } from "../types";
 
-const Feed = ({ postAPI }: PropsFeed) => {
-const [posteoSeleccionado, setPosteoSeleccionado] =
-  useState<string | null>(null);
+const Feed = ({posteoSeleccionado, setPosteoSeleccionado, postAPI }: PropsFeed) => {
+
   return (
     <>
       {posteoSeleccionado === null ? (
-        <table>
-          <thead>
+        <table className="tableFeed">
+          <thead className="theadFeedTitle">
             <tr>
-              <th>TRENDING</th>
+              <th className="Trending">TRENDING</th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="BodyPosteos">
             {postAPI.map(pa => (
               <Posteos
                
