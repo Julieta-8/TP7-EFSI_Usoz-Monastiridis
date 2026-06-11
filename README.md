@@ -98,3 +98,4 @@ Botón visual de editar perfil o configuración.
 Tuvimos problemas para detectar el error detras de los paramteros entre componenetes y decidimos implementar props 
 
 //Como los formatos del id de la API y el manual son diferentes(ya que uno es un strign), se decidió hacer un combinado
+Para la logica implementamos un metodo similar al tp de API de peliculas, donde se utiliza el usestate vació y al clickear en un posteo se le da el id del posteo apretado, esto lo lleva al componente post que posee la informacion detallada en base al id da la variable transferida 
