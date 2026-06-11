@@ -182,3 +182,40 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#070b2f;
+    color:white;
+    font-family:'Segoe UI', sans-serif;
+}
+
+.App{
+    min-height:100vh;
+}
+
+.MainLayout{
+    display:flex;
+}
+
+.Contenido{
+    flex:1;
+    padding:20px 30px;
+}

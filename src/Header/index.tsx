@@ -1,23 +1,38 @@
+import './Header.css'
+import {
+  Search,
+  Settings,
+  Camera,
+  Send
+} from "lucide-react";
 const Header = ({}) => {
 
   return (
-    <div>
-     <img src="" alt="" className="Logo"/>
-      
-        <div className="Buscador">
-            <img src="" alt="" className="Lupa"/>
-            <p></p>
+    <header className="Header">
+    <img
+        src="/instagram-logo.png"
+        className="Logo"
+        alt=""
+    />
+<div className="Buscador">
+  <Search className="Lupa" />
 
-        </div>
-        <div>
-              <img src="" alt="" className="Icon"/>
-               <img src="" alt="" className="Icon"/>
-                <img src="" alt="" className="Icon"/>
-        </div>
-        <div>
-            <p></p>
-        </div>
+  <input
+    className="InputBuscador"
+    placeholder="Search"
+  />
+</div>
+
+    <div className="HeaderIcons">
+         <Settings className="Icon" />
+  <Camera className="Icon" />
+  <Send className="Icon" />
+
+        <button className="NewPost">
+            New Post
+        </button>
     </div>
+</header>
   );
 };
 

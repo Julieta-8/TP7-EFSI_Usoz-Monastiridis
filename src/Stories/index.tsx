@@ -1,26 +1,30 @@
 import type { Unsplash, UnsplashPhoto } from "../types";
 import type { PropsStories } from "../types";
 
-
+import './Stories.css'
 const Stories = ({posteoSeleccionado, setPosteoSeleccionado,postAPI}: PropsStories) => {
     return (
         <>
          {posteoSeleccionado === null ? (
-        <table className="tableStory">
-                <h1 className="Stories">STORIES</h1>
-            <tbody >
-                { postAPI.map(p => (
-                    <tr>
-                        <td className="StorieUser">{ p.user.username }</td>
-                            <img    className="StorieIMG" src={p.urls.regular}
-        alt={p.urls.regular} />
+            <tbody>
+<h1 className="Stories">STORIES</h1>
 
-                    </tr>
-                )
-                )}
-                
-            </tbody>
-        </table>
+<div className="StoriesContainer">
+  {postAPI.map(p => (
+    <div className="StoryCard" key={p.id}>
+      <img
+        className="StorieIMG"
+        src={p.urls.regular}
+        alt=""
+      />
+
+      <span className="StorieUser">
+        @{p.user.username}
+      </span>
+    </div>
+  ))}
+</div>
+</tbody>
             ):(<div></div>)}
                     </>
     );

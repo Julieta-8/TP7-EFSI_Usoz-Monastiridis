@@ -1,0 +1,79 @@
+.Header{
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+}
+
+.Logo{
+    height:35px;
+}
+
+.Buscador{
+    width:420px;
+    height:42px;
+
+    background:#10153d;
+
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 15px;
+}
+
+.Lupa{
+    width:18px;
+    margin-right:10px;
+}
+
+.InputBuscador{
+    width:100%;
+    border:none;
+    outline:none;
+    background:none;
+
+    color:white;
+}
+
+.HeaderIcons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.Icon{
+    width:24px;
+    cursor:pointer;
+}
+
+.NewPost{
+    border:none;
+
+    background:linear-gradient(
+    90deg,
+    #ff4da6,
+    #8c52ff
+    );
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+.Icon{
+  width:24px;
+  height:24px;
+}
+
+.Lupa{
+  width:18px;
+  height:18px;
+}

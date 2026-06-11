@@ -6,6 +6,11 @@ import Feed from './Feed'
 import Header from './Header'
 import Stories from './Stories'
 import Perfil from './Perfil'
+import  './Feed/Feed.css'
+import  './Header/Header.css'
+import  './Stories/Stories.css'
+import  './Perfil/Perfil.css'
+import './Header/Header.css'
 import type { Unsplash } from './types'
 
 function App() {
@@ -90,12 +95,19 @@ const posteo: Listado[]=  [
 
   return (
     <>
-<div>
+<div className='App'>
   <Header>
    </Header>
-    <Stories  postAPI ={posts}    setPosteoSeleccionado ={setPosteoSeleccionado} posteoSeleccionado ={posteoSeleccionado} />
+
+   <div className='MainLayout'>
     <Perfil  postAPI ={posts} posteoSeleccionado ={posteoSeleccionado} setPosteoSeleccionado ={setPosteoSeleccionado} />
-    <Feed    postAPI ={posts} posteoSeleccionado ={posteoSeleccionado} setPosteoSeleccionado ={setPosteoSeleccionado} />
+    <div className='Contenido'>
+             <Stories  postAPI ={posts}    setPosteoSeleccionado ={setPosteoSeleccionado} posteoSeleccionado ={posteoSeleccionado} />
+
+       <Feed    postAPI ={posts} posteoSeleccionado ={posteoSeleccionado} setPosteoSeleccionado ={setPosteoSeleccionado} />
+
+    </div>
+</div>
 </div>
     </>
   )

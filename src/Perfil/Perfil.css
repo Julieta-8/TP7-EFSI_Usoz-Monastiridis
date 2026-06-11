@@ -1,0 +1,147 @@
+.PerfilContainer{
+    width:260px;
+    min-height:calc(100vh - 80px);
+
+    background:#09052c;
+
+    padding:25px;
+}
+.FotoPerfil{
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:3px solid #ff4da6;
+
+    display:block;
+    margin:auto;
+}
+.UserNamePerfil{
+    margin-top:15px;
+    text-align:center;
+    font-size:30px;
+}
+
+.NamePerfil{
+    text-align:center;
+    color:#b8bdd6;
+}
+.Stats{
+    margin-top:20px;
+
+    display:flex;
+    justify-content:space-between;
+}
+/*.StatCard{
+    width:90px;
+    height:55px;
+
+    background:#10153d;
+
+    border-radius:8px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+}
+.MenuPerfil{
+    margin-top:40px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}*/
+.SeccionSlectioned{
+    height:55px;
+
+    background:#1c2256;
+
+    border-left:4px solid #ff4da6;
+
+    border-radius:8px;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:20px;
+
+    gap:15px;
+
+    cursor:pointer;
+}
+.NotSlectioned{
+    height:55px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    padding-left:20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.NotSlectioned:hover{
+    background:#10153d;
+}
+.UserNamePerfil{
+    color:white;
+    text-align:center;
+    margin-top:15px;
+    font-size:2rem;
+    font-weight:600;
+}
+
+.NamePerfil{
+    color:#b8bdd6;
+    text-align:center;
+    margin-top:5px;
+}
+.Stats{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+    margin:25px 0;
+}
+.StatCard{
+    width:110px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    background:#14184a;
+
+    border-radius:10px;
+}
+.MenuPerfil{
+    margin-top:40px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.MenuPerfil{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+section{
+        display:flex;
+    flex-direction:column;
+
+    align-items:center;
+}

@@ -3,7 +3,7 @@
 import Post from "../Post"
 import Posteos from "../Posteos"
 import { useState, useEffect } from 'react'
-
+import './Feed.css'
 
 import type { PropsFeed } from "../types";
 
