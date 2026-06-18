@@ -68,7 +68,7 @@ const Post = ({
             </span>
 
             <p className="CaptionText">
-              Exploring the future of robotics and immersive storytelling.
+              Exploring the the beauty of travelling and living the moment.
             </p>
 
           </div>
@@ -77,10 +77,10 @@ const Post = ({
 
             <div className="Comment">
               <span className="CommentUser">
-                pixarfan
+                travelerfan
               </span>
 
-              Amazing work!
+              Amazing sights!
             </div>
 
             <div className="Comment">
