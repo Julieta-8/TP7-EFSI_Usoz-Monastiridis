@@ -9,40 +9,40 @@ import {
 } from "lucide-react";
 
 
-const Posteos = ({ setPosteoSeleccionado, post}: PropsPosteos) => {
+const Posteos = ({ setPosteoSeleccionado, post }: PropsPosteos) => {
 
   return (
 
-   <tbody >
+    <tbody >
 
- <button onClick={(() => setPosteoSeleccionado(post.id))}>
-     <div
-  className="PostCard"
-  onClick={() => setPosteoSeleccionado(post.id)}
->
+      <button onClick={(() => setPosteoSeleccionado(post.id))}>
+        <div
+          className="PostCard"
+          onClick={() => setPosteoSeleccionado(post.id)}
+        >
 
-  <img
-    className="PosteosImg"
-    src={post.urls.regular}
-    alt=""
-  />
+          <img
+            className="PosteosImg"
+            src={post.urls.regular}
+            alt=""
+          />
 
-  <div className="PostFooter">
+          <div className="PostFooter">
 
-    <span className="UserPosteos">
-      @{post.user.username}
-    </span>
+            <span className="UserPosteos">
+              @{post.user.username}
+            </span>
 
-    <div className="PostActions">
-      <Heart className="PostIcon"/>
-      <MessageCircle className="PostIcon"/>
-      <Send className="PostIcon"/>
-    </div>
+            <div className="PostActions">
+              <Heart className="PostIcon" />
+              <MessageCircle className="PostIcon" />
+              <Send className="PostIcon" />
+            </div>
 
-  </div>
+          </div>
 
-</div>
-  </button>
+        </div>
+      </button>
     </tbody>
 
   );

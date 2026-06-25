@@ -1,6 +1,6 @@
 
 export type UnsplashPhoto = {
-    posteoAPI: Unsplash[];
+  posteoAPI: Unsplash[];
 }
 
 export type Unsplash = {
@@ -16,13 +16,13 @@ export type Unsplash = {
   };
 
   likes: number;
-    caption ?: string;
+  caption?: string;
 
-  comments ? : string[];
+  comments?: string[];
 
-  date ? : string;
+  date?: string;
 
-  location ? : string;
+  location?: string;
 }
 
 
@@ -52,7 +52,7 @@ export interface Listado {
 
 ///////////////////
 export type PropsFeed = {
-    posteoSeleccionado: string | null;
+  posteoSeleccionado: string | null;
   setPosteoSeleccionado: React.Dispatch<
     React.SetStateAction<string | null>
   >;
@@ -60,7 +60,7 @@ export type PropsFeed = {
   /*posteo: Listado[];*/
 };
 export type PropsStories = {
-    posteoSeleccionado: string | null;
+  posteoSeleccionado: string | null;
   setPosteoSeleccionado: React.Dispatch<
     React.SetStateAction<string | null>
   >;
@@ -73,12 +73,12 @@ export type PropsPosteos = {
     React.SetStateAction<string | null>
   >;
 };
-export type PropsPerfil ={
-    posteoSeleccionado: string  | null;
+export type PropsPerfil = {
+  posteoSeleccionado: string | null;
   setPosteoSeleccionado: React.Dispatch<
     React.SetStateAction<string | null>
   >;
-  postAPI:Unsplash[];
+  postAPI: Unsplash[];
 }
 export type PropsPost = {
   posteoSeleccionado: string;
@@ -86,5 +86,5 @@ export type PropsPost = {
     React.SetStateAction<string | null>
   >;
   postAPI: Unsplash[];
- /* posteo: Listado[];*/
+  /* posteo: Listado[];*/
 };
